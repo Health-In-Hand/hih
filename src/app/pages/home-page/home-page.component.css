@@ -1,0 +1,15 @@
+main, .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.entrar{
+    background-color: rgb(56,182,255);
+    color: white;
+    height: 40px;
+    width: 200px; 
+}
+
+ 
