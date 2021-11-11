@@ -1,1 +1,37 @@
-<p>cadastro-vacinas works!</p>
+<main>
+    <div>
+        <img src="../../../assets/images/logo3.png" alt="logo">
+    </div>
+    <form [formGroup]="form" class="form-builder" >
+        <div class="primeiralinha">
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Data da Aplicação</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="data">
+                <mat-datepicker-toggle matSuffix [for]="picker">
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Número De Doses</mat-label>
+                <input matInput formControlName="numero" placeholder="4">
+            </mat-form-field>
+        </div>
+        <div class="segundalinha">
+        <mat-form-field appearance="outline">
+            <mat-label>Indicação </mat-label>
+            <input matInput formControlName="indicacao" (click)="indicacao()">
+            <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Nome da Vacina </mat-label>
+            <input matInput formControlName="nomeVacina" placeholder="000">
+        </mat-form-field>
+        </div>
+            <button mat-raised-button class="btn">
+                Casdastrar Vacina
+            </button>
+
+    </form>
+</main>
