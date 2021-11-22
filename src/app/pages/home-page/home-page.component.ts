@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatAccordion } from '@angular/material/expansion';
 
 @Component({
@@ -7,10 +8,17 @@ import { MatAccordion } from '@angular/material/expansion';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
+  form!:FormGroup;
   @ViewChild(MatAccordion) accordion: MatAccordion | undefined;
-  constructor() { }
+  constructor(private fb:FormBuilder) { }
 
   ngOnInit(): void {
+    this.initForm()
+  }
+  initForm () {
+    this.form = this.fb.group({
+      cpf:['']
+    })
   }
 
 }

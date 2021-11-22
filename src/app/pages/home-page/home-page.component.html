@@ -1,38 +1,16 @@
 <main>
-  <div>
+  <div class="imgcontainer"> 
     <img src="../../../assets/images/logo3.png" alt="logo">
   </div>
 <div class="form">
-  <form  >
-    <mat-form-field appearance="outline">
+  <form class="form" [formGroup]="form">
+    <mat-form-field class="input" appearance="outline">
       <mat-label>CPF</mat-label>
-      <input matInput>
+      <input formControlName='cpf' matInput >
     </mat-form-field>
   </form >
   <button mat-raised-button class="entrar">Entrar</button>
 </div>
 
-
-<mat-accordion>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Welcome
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <mat-form-field appearance="outline">
-      <mat-label>CPF</mat-label>
-      <input matInput>
-    </mat-form-field>
-  </mat-expansion-panel>
-</mat-accordion>
-
-<div>
-  <mat-list>
-    <mat-list-item> Pepper </mat-list-item>
-    <mat-list-item> Salt </mat-list-item>
-    <mat-list-item> Paprika </mat-list-item>
-   </mat-list>
-</div>
 </main>
 
